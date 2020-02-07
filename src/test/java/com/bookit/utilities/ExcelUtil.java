@@ -62,7 +62,7 @@ public class ExcelUtil {
         // get all columns
         List<String> columns = getColumnsNames();
         // this will be returned
-        List<Map<String, String>> data = new ArrayList<Map<String, String>>();
+        List<Map<String, String>> data = new ArrayList<>();
 
         for (int i = 1; i < rowCount(); i++) {
             // get each row
@@ -82,7 +82,7 @@ public class ExcelUtil {
     }
 
     public List<String> getColumnsNames() {
-        List<String> columns = new ArrayList<String>();
+        List<String> columns = new ArrayList<>();
 
         for (Cell cell : workSheet.getRow(0)) {
             columns.add(cell.toString());
